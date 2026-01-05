@@ -1,27 +1,15 @@
-/*
- * ESPRESSIF MIT License
- *
- * Copyright (c) 2020 <ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD>
- * Copyright (c) 2023 Tomoyuki Sakurai <y@trombik.org>
- *
- * Permission is hereby granted for use on all ESPRESSIF SYSTEMS products, in which case,
- * it is free of charge, to any person obtaining a copy of this software and associated
- * documentation files (the "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the Software is furnished
- * to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or
- * substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
- * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
- * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- */
+/*  Part of RadioJKK32 - Multifunction Internet Radio Player - project
+ * 
+    1. RadioJKK32 is a multifunctional internet radio player designed to provide a seamless listening experience based on ESP-ADF.
+    2. It supports various audio formats and streaming protocols, allowing users to access a wide range of radio stations.
+    4. It includes advanced audio processing capabilities, such as equalization and resampling, to enhance the sound experience.
+    5. The device is built on the ESP32-A1S audio dev board, leveraging its powerful processing capabilities and connectivity options.
+    6. The project is open-source and licensed under the MIT License, allowing for free use, modification, and distribution.
+
+    Based on the AI Thinker ESP32-A1S Audio Kit board definition.
+
+ *  Copyright (C) 2025 Jaromir Kopp (JKK)
+*/
 
 #include "esp_log.h"
 #include "board.h"
@@ -130,7 +118,7 @@ static esp_err_t as1_led_indicator_pattern(void *handle, int pat, int value){
 }
 
 display_service_handle_t audio_board_led_init(void){
-  //  gpio_reset_pin((gpio_num_t)get_green_led_gpio());
+    gpio_reset_pin((gpio_num_t)get_green_led_gpio());
     led_indicator_handle_t led = led_indicator_init((gpio_num_t)get_green_led_gpio());
     display_service_config_t display = {
         .based_cfg = {
@@ -142,24 +130,35 @@ display_service_handle_t audio_board_led_init(void){
             .service_stop = NULL,
             .service_destroy = NULL,
             .service_ioctl = as1_led_indicator_pattern,
-            .service_name = "DISPLAY_serv",
+            .service_name = "DISP_serv",
             .user_data = NULL,
         },
         .instance = led,
     };
+#if defined(CONFIG_JKK_RADIO_USING_EXT_KEYS) 
+    return NULL;
+#else
     return display_service_create(&display);
+#endif
 }
 
 esp_err_t audio_board_key_init(esp_periph_set_handle_t set)
 {
     periph_button_cfg_t btn_cfg = {
+#if defined(CONFIG_JKK_RADIO_USING_I2C_LCD)
+        .gpio_mask = (1ULL << get_input_mode_id())     | \
+                     (1ULL << get_input_volup_id())      | \
+                     (1ULL << get_input_set_id())      | \
+                     (1ULL << get_input_voldown_id()),
+#else
         .gpio_mask = (1ULL << get_input_volup_id())     | \
                      (1ULL << get_input_voldown_id())   | \
                      (1ULL << get_input_mode_id())      | \
                      (1ULL << get_input_set_id())       | \
                      (1ULL << get_input_rec_id())       | \
                      (1ULL << get_input_play_id()),
-        .long_press_time_ms = 1000
+#endif
+        .long_press_time_ms = 700
     };
     esp_periph_handle_t button_handle = periph_button_init(&btn_cfg);
     AUDIO_NULL_CHECK(TAG, button_handle, return ESP_ERR_ADF_MEMORY_LACK);

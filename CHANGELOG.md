@@ -1,0 +1,217 @@
+# Changelog
+
+All notable changes to RadioJKK32 project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [1.0.7] - 2025-12-02
+
+### Fixed
+- A serious bug related to the inability to use **ESP SoftAP Prov**, caused by the SoftAP mode not starting on the device, has been fixed.
+
+
+## [1.0.6] - 2025-11-11
+
+### Added
+- Support for TS AAC audio codec (enables playback of BBC Radio stations and similar streams)
+
+### Fixed
+- URLs with .m3u8 playlists now play correctly without stopping or errors after a few seconds
+
+## [1.0.5] - 2025-11-02
+
+### Added
+- LCD display turns off automatically 15 seconds after stopping playback (by long pressing [vol-] button or via web server stop/pause)
+- **Web interface: dedicated LCD on/off button** for manual display control (visible only if display is present)
+
+## [1.0.4] - 2025-08-05
+
+### Added
+- Error message display in web page when recording don't start
+- Header of record info file with start and end time of record
+
+### Changed
+- Memory optimizations
+- Change station optimizations
+- Moved HTTP server task stak to SPIRAM
+- Moved NVS operation to main task or RTOS timer
+
+### Fixed
+- Fixed a rare reboot bug when switching stations while recording is on
+- Fixed absence of record info in file (version without display)
+- Improved web page error handling and information
+
+## [1.0.3] - 2025-07-25
+
+### Added
+- Save and restore Play/Stop state
+- Long press Vol- stopped playing, long press Vol+ started playing.
+- On/off record to SD card from WWW interface
+- Indicate the recording state in WWW interface
+- Dot center in display when system counting time to save settings and state (not saved yet)
+
+### Changed
+- Allow to allocate .bss data in external memory
+- After provisioning, playing is set by default
+
+### Fixed
+- Fixed problem with start/stop recording with streams, with sample rate greater than 25000
+- Problem with web server not responding after provisioning (first run)
+
+## [1.0.2] - 2025-07-24
+
+### Added
+- Gamechanger! Added web buttons to play/pause and stop playing
+- Added information about the current status on the display
+
+### Fixed
+- Better volume and PA handling
+
+## [1.0.1] - 2025-07-23
+
+### Fixed
+- Fixed wrong file name for automatic station list saving. 
+  There was “station.txt” instead of the correct “stations.txt”
+
+## [1.0.0] - 2025-07-23
+
+### Added
+- Web interface for station management with drag & drop reordering
+- Equalizer selection through web interface
+- Station backup and export functionality
+- Automatic station backup system
+- Remote station backup download via web interface
+- Support for station reordering with NVS persistence
+- Enhanced web UI with responsive design for mobile devices
+- Drop zone for easier station list management
+- Bin files based on ESP-IDF 5.5 and current ESP-ADF
+
+### Changed
+- Improved web interface layout with better spacing and alignment
+- Enhanced error handling in web requests
+- Cleaned up JavaScript console logging for production use
+- Updated comments in code to English for better internationalization
+- Maximum number of stations increased by 50
+- Maximum number of equalizers increased to 20
+- Optymized for ESP-IDF 5.5
+
+### Fixed
+- Station reordering functionality now properly updates indices
+- Equalizer list loading in web interface
+- Mobile responsiveness for iPhone and Android devices
+- Proper synchronization between LCD display and web interface
+
+## [0.9.0] - 2025-07-01
+
+### Added
+- ESP32-A1S audio kit support with custom board definition
+- Multi-format audio decoding (MP3, AAC, OGG, WAV, FLAC, OPUS, M4A)
+- Internet radio streaming with HTTP/HTTPS support
+- I2C OLED display support (SSD1306/SH1107)
+- 10-band equalizer with preset management
+- SD card recording in AAC format
+- Station management with favorites support
+- NVS (Non-Volatile Storage) for persistent settings
+- WiFi provisioning with SoftAP fallback
+- Volume control with mute functionality
+- Real-time audio level meter
+- SNTP time synchronization
+- mDNS service discovery
+- Web server for remote control
+- Button controls with short/long press support
+- Drag & drop station reordering in web interface
+- Audio pipeline with resampling and processing
+- Station backup and restore functionality
+
+### Hardware Support
+- AI Thinker ESP32-A1S Audio Kit (variants 5 and 7)
+- ES8388 audio codec
+- I2C OLED displays (128x64 SSD1306, 64x128 SH1107)
+- SD card support (1-line mode)
+- GPIO buttons or ADC buttons
+- External amplifier control
+- Headphone detection support
+
+### Audio Features
+- Sample rates: 8kHz to 48kHz
+- Bit depths: 16-bit, 24-bit
+- Channels: Mono, Stereo
+- Audio formats: MP3, AAC, OGG, WAV, FLAC, OPUS, M4A, AMR-NB, AMR-WB
+- Real-time equalizer with 10 bands
+- Volume control (0-100%)
+- Audio recording to SD card in AAC format
+- Automatic gain control
+- Audio level monitoring
+
+### Network Features
+- WiFi STA mode with WPA/WPA2 support
+- WiFi provisioning via ESP SoftAP
+- HTTP/HTTPS streaming support
+- mDNS hostname: RadioJKK.local
+- Web interface on port 80
+- SNTP time synchronization
+- Playlist support (M3U, PLS)
+- Automatic reconnection handling
+
+### Storage Features
+- NVS for configuration persistence
+- SD card for audio recording
+- Station list import/export
+- Equalizer preset management
+- Automatic backup system
+- Configuration file support (settings.txt, stations.txt, eq.txt)
+
+### User Interface
+- Physical buttons for basic control
+- I2C OLED display with real-time information
+- Web interface for advanced management
+- Station drag & drop reordering
+- Real-time audio level display
+- Responsive design for mobile devices
+
+### Configuration Files
+- `settings.txt`: WiFi credentials and web server settings
+- `stations.txt`: Radio station list in CSV format
+- `eq.txt`: Equalizer presets configuration
+
+### API Endpoints
+- `GET /`: Main web interface
+- `GET /status`: Current status (volume, station, equalizer)
+- `GET /station_list`: List of all stations
+- `GET /eq_list`: List of equalizer presets
+- `POST /volume`: Set volume level
+- `POST /station_select`: Select radio station
+- `POST /station_edit`: Add/edit station
+- `POST /station_delete`: Delete station
+- `POST /station_reorder`: Reorder stations
+- `POST /eq_select`: Select equalizer preset
+- `GET /backup_stations`: Download station backup
+
+---
+
+## Version Numbering
+
+This project uses [Semantic Versioning](https://semver.org/):
+- **MAJOR**: Incompatible API changes or major feature overhauls
+- **MINOR**: New functionality added in backwards compatible manner
+- **PATCH**: Backwards compatible bug fixes
+
+## Contributing
+
+When contributing to this project, please:
+1. Update the CHANGELOG.md with your changes
+2. Follow the existing format and categories
+3. Add entries to the "Unreleased" section
+4. Move entries to a version section when releasing
+
+## Categories
+
+- **Added**: New features
+- **Changed**: Changes in existing functionality  
+- **Deprecated**: Soon-to-be removed features
+- **Removed**: Now removed features
+- **Fixed**: Bug fixes
+- **Security**: Vulnerability fixes

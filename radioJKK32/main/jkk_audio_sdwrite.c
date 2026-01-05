@@ -21,8 +21,9 @@
 #include "wav_encoder.h"
 #include "audio_common.h"
 
-
 #include "jkk_audio_sdwrite.h"
+
+#define DEFAULT_AAC_BITRATE (80 * 1024) // Default bitrate for AAC encoder
 
 static const char *TAG = "A_SD";
 
@@ -67,28 +68,41 @@ esp_err_t JkkAudioSdWriteSetUri(const char *uri) {
 void JkkAudioSdWriteStopStream(void) {
     if(audioSd.pipeline == NULL) {
         ESP_LOGE(TAG, "Audio pipeline is not initialized");
-        return ;
+        return;
+    }
+    
+    if (xSemaphoreTake(audioSd.recording_mutex, pdMS_TO_TICKS(5000)) != pdTRUE) {
+        ESP_LOGE(TAG, "Failed to take recording mutex");
+        return;
     }
 
-    audio_pipeline_stop(audioSd.pipeline);
-    audio_pipeline_wait_for_stop(audioSd.pipeline);
-    audio_pipeline_reset_ringbuffer(audioSd.pipeline);
-    audio_pipeline_reset_elements(audioSd.pipeline);
-    audio_pipeline_reset_items_state(audioSd.pipeline);
-  /*  
-    if(audioSd.raw_read) {
-        audio_element_reset_state(audioSd.raw_read);
+    if (!audioSd.is_recording) {
+        ESP_LOGI(TAG, "Recording already stopped");
+        xSemaphoreGive(audioSd.recording_mutex);
+        return;
     }
-    if(audioSd.resample) {
-        audio_element_reset_state(audioSd.resample);
+
+    ESP_LOGI(TAG, "Stopping recording pipeline...");
+    
+    esp_err_t ret = ESP_OK;
+    ret |= audio_pipeline_stop(audioSd.pipeline);
+    ret |= audio_pipeline_wait_for_stop(audioSd.pipeline);
+    ret |= audio_pipeline_terminate(audioSd.pipeline); // DODANE
+    
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Error stopping pipeline: %s", esp_err_to_name(ret));
     }
-    if(audioSd.encoder) {
-        audio_element_reset_state(audioSd.encoder);
-    }
-    if(audioSd.fatfs_wr) {
-        audio_element_reset_state(audioSd.fatfs_wr);
-    } */
+    
+    // Reset pipeline state
+    ret |= audio_pipeline_reset_ringbuffer(audioSd.pipeline);
+    ret |= audio_pipeline_reset_elements(audioSd.pipeline);
+    ret |= audio_pipeline_reset_items_state(audioSd.pipeline);
+    
     audioSd.is_recording = false;
+    
+    xSemaphoreGive(audioSd.recording_mutex);
+    
+    ESP_LOGI(TAG, "Recording stopped successfully");
 }
 
 esp_err_t JkkAudioSdWriteStartStream(const char *uri) {
@@ -96,52 +110,80 @@ esp_err_t JkkAudioSdWriteStartStream(const char *uri) {
         ESP_LOGE(TAG, "Audio pipeline is not initialized");
         return ESP_ERR_INVALID_STATE;
     }
+    
+    // DODANE: Zabezpieczenie mutex
+    if (xSemaphoreTake(audioSd.recording_mutex, pdMS_TO_TICKS(5000)) != pdTRUE) {
+        ESP_LOGE(TAG, "Failed to take recording mutex");
+        return ESP_ERR_TIMEOUT;
+    }
+
+    if (audioSd.is_recording) {
+        ESP_LOGI(TAG, "Recording already in progress");
+        xSemaphoreGive(audioSd.recording_mutex);
+        return ESP_OK;
+    }
+
     esp_err_t ret = ESP_OK;
 
-    if(uri){
+    if(uri) {
         ret = JkkAudioSdWriteSetUri(uri);
-         if(ret != ESP_OK) {
+        if(ret != ESP_OK) {
             ESP_LOGE(TAG, "Failed to set sd write uri: %s", esp_err_to_name(ret));
+            xSemaphoreGive(audioSd.recording_mutex);
             return ret;
         }
     }
 
+    // Upewnij się, że pipeline jest w odpowiednim stanie
+    audio_pipeline_stop(audioSd.pipeline);
+    audio_pipeline_wait_for_stop(audioSd.pipeline);
+    audio_pipeline_terminate(audioSd.pipeline);
+    
+    // Reset state
     audio_pipeline_reset_ringbuffer(audioSd.pipeline);
     audio_pipeline_reset_elements(audioSd.pipeline);
     audio_pipeline_reset_items_state(audioSd.pipeline);
 
+    // Start pipeline
     ret = audio_pipeline_run(audioSd.pipeline);
     if(ret != ESP_OK) {
         ESP_LOGE(TAG, "Failed to run audio pipeline: %s", esp_err_to_name(ret));
+        xSemaphoreGive(audioSd.recording_mutex);
         return ret;
     }
+    
     audioSd.is_recording = true;
+    xSemaphoreGive(audioSd.recording_mutex);
 
-    ESP_LOGI(TAG, "Audio pipeline restarted successfully");
+    ESP_LOGI(TAG, "Recording started successfully");
     return ESP_OK;
 }
 
+
+bool JkkAudioSdWriteIsRecording(void) {
+    if (audioSd.recording_mutex == NULL) {
+        return audioSd.is_recording;
+    }
+    
+    bool recording = false;
+    if (xSemaphoreTake(audioSd.recording_mutex, pdMS_TO_TICKS(100)) == pdTRUE) {
+        recording = audioSd.is_recording;
+        xSemaphoreGive(audioSd.recording_mutex);
+    }
+    return recording;
+}
+
 esp_err_t JkkAudioSdWriteRestartStream(bool withElements) {
-    if(audioSd.pipeline == NULL) {
-        ESP_LOGE(TAG, "Audio pipeline is not initialized");
-        return ESP_ERR_INVALID_STATE;
-    }
-    esp_err_t ret = ESP_OK;
-    audio_pipeline_stop(audioSd.pipeline);
-    audio_pipeline_wait_for_stop(audioSd.pipeline);
-    audio_pipeline_reset_ringbuffer(audioSd.pipeline);
-    audio_pipeline_reset_elements(audioSd.pipeline);
-    audio_pipeline_reset_items_state(audioSd.pipeline);
-
-    ret = audio_pipeline_run(audioSd.pipeline);
-    if(ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to run audio pipeline: %s", esp_err_to_name(ret));
-        return ret;
-    }
-    audioSd.is_recording = true;
-
-    ESP_LOGI(TAG, "Audio pipeline restarted successfully");
-    return ESP_OK;
+    ESP_LOGI(TAG, "Restarting recording stream...");
+    
+    // Zatrzymaj obecne nagrywanie
+    JkkAudioSdWriteStopStream();
+    
+    // Krótka pauza dla stabilizacji
+    vTaskDelay(pdMS_TO_TICKS(100));
+    
+    // Restart z obecnym URI
+    return JkkAudioSdWriteStartStream(NULL);
 }
 
 JkkAudioSdWrite_t *JkkAudioSdWrite_init(int encoder_type, int sample_rate, int channels) {
@@ -173,8 +215,8 @@ JkkAudioSdWrite_t *JkkAudioSdWrite_init(int encoder_type, int sample_rate, int c
         rsp_cfg.dest_rate = sample_rate;
         rsp_cfg.dest_ch = channels;
         rsp_cfg.mode = RESAMPLE_ENCODE_MODE;
-      //  rsp_cfg.complexity = 0;
         rsp_cfg.task_core = 1; // Use core 1 for resampling
+        rsp_cfg.stack_in_ext = true;
         audioSd.resample = rsp_filter_init(&rsp_cfg);
         if(audioSd.resample == NULL) {
             ESP_LOGE(TAG, "Failed to create resample filter");
@@ -187,11 +229,12 @@ JkkAudioSdWrite_t *JkkAudioSdWrite_init(int encoder_type, int sample_rate, int c
     ESP_LOGI(TAG, "Pointer filter_resample_write=%p", audioSd.resample);
     if(encoder_type == 1) { // AAC
         ESP_LOGI(TAG, "[0.4] Create jkkRadio.audioMain->aac_encoder to encode data");
-        aac_encoder_cfg_t wav_cfg = DEFAULT_AAC_ENCODER_CONFIG();
-        wav_cfg.sample_rate = sample_rate;
-        wav_cfg.bitrate = 60*1024; // 60 kbps
-        wav_cfg.task_core = 1;
-        audioSd.encoder = aac_encoder_init(&wav_cfg);
+        aac_encoder_cfg_t aac_cfg = DEFAULT_AAC_ENCODER_CONFIG();
+        aac_cfg.sample_rate = sample_rate;
+        aac_cfg.bitrate = DEFAULT_AAC_BITRATE;
+        aac_cfg.task_core = 1;
+        aac_cfg.stack_in_ext = true;
+        audioSd.encoder = aac_encoder_init(&aac_cfg);
         if(audioSd.encoder == NULL) {
             ESP_LOGE(TAG, "Failed to create AAC encoder");
             return NULL;
@@ -200,6 +243,7 @@ JkkAudioSdWrite_t *JkkAudioSdWrite_init(int encoder_type, int sample_rate, int c
         ESP_LOGI(TAG, "[0.4] Create jkkRadio.audioMain->wav_encoder to encode data");
         wav_encoder_cfg_t wav_cfg = DEFAULT_WAV_ENCODER_CONFIG();
         wav_cfg.task_core = 1;
+        wav_cfg.stack_in_ext = true;
         audioSd.encoder = wav_encoder_init(&wav_cfg);
         if(audioSd.encoder == NULL) {
             ESP_LOGE(TAG, "Failed to create WAV encoder");
@@ -254,14 +298,27 @@ JkkAudioSdWrite_t *JkkAudioSdWrite_init(int encoder_type, int sample_rate, int c
              (link_idx > 1) ? link_tag[2] : "",
              (link_idx > 2) ? link_tag[3] : ""); 
 
+
+    audioSd.recording_mutex = xSemaphoreCreateMutex();
+    if (audioSd.recording_mutex == NULL) {
+        ESP_LOGE(TAG, "Failed to create recording mutex");
+        return NULL;
+    }
     return &audioSd;
 }
 
 void JkkAudioSdWrite_deinit(void) {
+    // Zatrzymaj nagrywanie jeśli trwa
+    if (audioSd.is_recording) {
+        JkkAudioSdWriteStopStream();
+    }
+    
     if(audioSd.pipeline) {
         audio_pipeline_stop(audioSd.pipeline);
         audio_pipeline_wait_for_stop(audioSd.pipeline);
         audio_pipeline_terminate(audioSd.pipeline);
+        
+        // Unregister elements
         if(audioSd.raw_read) {
             audio_pipeline_unregister(audioSd.pipeline, audioSd.raw_read);
         }
@@ -274,9 +331,12 @@ void JkkAudioSdWrite_deinit(void) {
         if(audioSd.fatfs_wr) {
             audio_pipeline_unregister(audioSd.pipeline, audioSd.fatfs_wr);
         }
+        
         audio_pipeline_deinit(audioSd.pipeline);
         audioSd.pipeline = NULL;
     }
+    
+    // Cleanup elements
     if(audioSd.raw_read) {
         audio_element_deinit(audioSd.raw_read);
         audioSd.raw_read = NULL;
@@ -292,5 +352,11 @@ void JkkAudioSdWrite_deinit(void) {
     if(audioSd.fatfs_wr) {
         audio_element_deinit(audioSd.fatfs_wr);
         audioSd.fatfs_wr = NULL;
+    }
+    
+    // DODANE: Cleanup mutex
+    if (audioSd.recording_mutex) {
+        vSemaphoreDelete(audioSd.recording_mutex);
+        audioSd.recording_mutex = NULL;
     }
 }

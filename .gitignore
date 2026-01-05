@@ -8,8 +8,7 @@
 radioJKK32/managed_components
 radioJKK32/managed_components/*
 
-# LuON_Base/JkkMQTT/broker
-# LuON_Base/JkkMQTT/broker/*
+radioJKK32/main/metadata_parser*
 
 */build
 */build/*
@@ -24,7 +23,10 @@ radioJKK32/managed_components/*
 .code-workspace
 *.code-workspace
 
+radioJKK32/dependencies.lock
+
 radioJKK32/sdkconfig
+radioJKK32/sdkconfig\ *
 radioJKK32/sdkconfig.old
 
 # Doc build artifacts

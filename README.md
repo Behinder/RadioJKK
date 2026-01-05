@@ -1,70 +1,276 @@
-# JkkRadio - Internet Radio for **AI Thinker ESP32-A1S**
+# RadioJKK32 - Multifunctional Internet Radio Player
 
-## **Features:**
-- Playback of internet radio stations from a list.
-- Recording of streams to an SD card in AAC format.
-- Volume control.
-- Selection of one of four equalizer settings.
+**RadioJKK32** is an advanced internet radio project based on the ESP32-A1S (ESP32-A1S Audio Kit), built using ESP-ADF libraries and designed to provide seamless music playback with a wide range of features and control options.
 
-Work in progress!
+## 🌟 Main Features
 
-## **Hardware Requirements:**
-Development board: **AI Thinker ESP32-A1S**  
-Technical specifications:  
-- ESP32-D0WD rev. 3.1  
-- 4 MB Flash  
-- 8 MB PSRAM  
-- ES8388 Audio CODEC with preamplifier  
-- NS4150 audio amplifiers, 2x 3W (4Ω)  
-- Battery connector  
-- USB UART connector  
-- MicroSD card slot  
-Example offer: [**AI Thinker ESP32-A1S**](https://s.click.aliexpress.com/e/_onbBPzW) (affiliate)
+### 🌐 **Local Web Server - NEW!**
 
-![AI Thinker ESP32-A1S](img/ESP32A1S.jpeg)
+- **Remote control** via a web browser: volume, station selection, equalizer adjustment
+- **Dedicated LCD on/off button** in the web interface for manual display control (visible only if display is present)
+- **Edit the radio station list** – modify, add, delete, and reorder entries  
+- **Automatic network discovery** using mDNS/Bonjour/NetBIOS  
+- **Responsive interface** that works on all devices  
+- **Local access** without the need for an Internet connection  
+- **Automatic SD card save** of the current station list  
 
-MicroSD card (up to 64 GB)
+### Other Updates
 
-## Using the Precompiled Binary:
-Flash the `RadioJKK_v0.bin` file from the `bin` folder to address 0x0 using any ESP32 flashing tool. Example command:  
+- Reorder radio stations via the web interface  
+- Automatically save the current station list from device flash memory (NVS) to the SD card  
+- Download the current station list in `.csv` format via the browser  
+- Equalizer selection via the web interface  
+- Increased maximum number of stations to 50  
+- Increased maximum number of equalizers to 20  
+- More built-in equalizers (10 total)
+
+### 📻 Audio Playback
+
+- Supports many audio formats: **MP3, AAC, OGG, WAV, FLAC, OPUS, M4A, AMR**
+- High-quality decoding and playback
+- Automatic reconnect on connection issues
+
+### 🔧 Audio Processing
+
+- **10-band equalizer** with predefined presets
+- Real-time audio level indicator (display required)
+- Option to enable/disable audio processing (equalizer)
+
+### 💾 Recording
+
+- **Recording to SD card** in AAC format
+- Automatic folder structure by date
+- Info files with recording metadata
+- Support for high-capacity SD cards
+
+### 📱 User Interfaces
+
+- **Local web server** – main control interface
+- **OLED I2C (SSD1306/SH1107)** with LVGL graphical interface
+- **GPIO keypad** with long press support
+- **QR codes** (if display is present) for easy WiFi setup
+
+### 💾 Saving Current Settings
+
+- **Station, equalizer, and volume** are saved and restored after restart
+- **Flash memory safety** – data is saved only after 10 seconds of change to avoid frequent writes
+- **Flash durability** – with intense use (hundreds of changes/day) minimum 15 years lifespan
+
+### 💾 Backup of Radio Station List
+
+- **Save station list to SD card** in format compatible with RadioJKK
+
+### 🔗 Connectivity
+
+- **WiFi** with automatic provisioning via ESP SoftAP Prov app
+- **mDNS/Bonjour, NetBIOS** for easy network discovery
+- **SNTP** for time synchronization
+- Configuration support via ESP SoftAP app
+
+### ⚙️ Configuration and Management
+
+- **Configuration via SD card** (stations, equalizer, WiFi)
+- **NVS storage** for persistent settings
+- **Automatic configuration loading** on startup
+
+## 🚀 Getting Started
+
+### Hardware Requirements
+
+- **ESP32-A1S Audio Kit**
+- **MicroSD card** (optional)
+- **OLED I2C display** (optional)
+
+Example offer: [App: ](https://s.click.aliexpress.com/e/_ooTic0A)[**AI Thinker ESP32-A1S**](https://s.click.aliexpress.com/e/_ooTic0A), [Web: ](https://s.click.aliexpress.com/e/_onbBPzW)[**AI Thinker ESP32-A1S**](https://s.click.aliexpress.com/e/_onbBPzW)
+
+#### Recommended Display
+
+OLED SSD1306 128x64 with I2C interface. Ideally with 4 built-in buttons, or connect separate buttons for convenience, e.g. [OLED SSD1306 128x64 with 4 buttons](https://s.click.aliexpress.com/e/_oFKo8XC)
+
+#### Display Connection:
+
+- SDA: **GPIO18**
+- SCL: **GPIO5**
+
+#### Optional External Button Connections:
+
+- KEY4 [Up] **GPIO23**
+- KEY3 [Down] **GPIO19**
+- KEY2 [Eq/Rec] **GPIO13/MTCK** (note: change DIP switch settings)
+- KEY1 [Stations] **GPIO22**
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone --recurse-submodules https://github.com/MacWyznawca/RadioJKK.git
+   cd radioJKK32
+   ```
+
+2. **Configure ESP-IDF and ESP-ADF:** Installation guide: [ESP-ADF](https://docs.espressif.com/projects/esp-adf/en/latest/get-started/index.html#quick-start). Repository: [ESP-ADF on GitHub](https://github.com/espressif/esp-adf).
+
+   **Note:** for ESP-IDF 5.4.x and 5.5.x use:
+
+   ```bash
+   cd $IDF_PATH
+   git apply $ADF_PATH/idf_patches/idf_v5.4_freertos.patch
+   ```
+
+3. **Build and flash:**
+
+   ```bash
+   idf.py build
+   idf.py -p [your/COM port] flash monitor
+   ```
+
+   Exit monitor: Ctrl + ]
+
+4. **Use precompiled file:**
+   Flash selected file from the `bin` folder to address 0x0 using any ESP32 flashing tool:
+
+   ```bash
+   esptool.py -p /dev/cu.usbserial-0001 write_flash 0x0 bin/RadioJKK_v1.bin
+   ```
+
+## 📌 Configuration
+
+### WiFi Configuration
+
+If scanning the **QR** code, go to step 3.
+
+1. **On first boot**, the device creates an access point named "JKK..."
+2. **Connect** to it and use the ESP SoftAP app
+3. **Scan the QR code** displayed on OLED or enter manually. PIN: jkk
+4. **Enter WiFi credentials**
+
+**Note:** after first setup, if the web server doesn't respond, a device restart is recommended.
+
+**Alternatively via SD card:**
+
+Create `settings.txt` file with SSID and password separated by a semicolon (single line):
+
 ```
-esptool.py -p /dev/cu.usbserial-0001 write_flash 0x0 bin/RadioJKK_v0.bin
+mySSID;myPassword
 ```
 
-### Preparing the MicroSD Card:
-- Format: FAT32 (MS-DOS).  
-- Create a plain text file `settings.txt` with the WiFi network name and password, separated by a semicolon (single line):  
-```
-myssid;mypassword
-```
+If you don’t want to start the web server, add `wwwoff` after the semicolon:
 
-- Create a plain text file `stations.txt` with a list of radio stations (up to 20) in CSV format (fields separated by semicolons) `url;short_name;description;favorite(1 or 0);type`.  
-Example format:  
 ```
-http://stream2.nadaje.com:9248/prw.aac;RW;Radio Wrocław - Public Radio;0;5
-http://stream2.nadaje.com:9228/ram.aac;RAM;Radio RAM;0;1
-http://stream2.nadaje.com:9238/rwkultura.aac;RWK;Radio Wrocław Kultura;1;1
-http://mp3.polskieradio.pl:8904/;Trójka;Polskie Radio Program Trzeci;0;1
+mySSID;myPassword;wwwoff
 ```
 
-Place these files in the root directory of the microSD card.  
+### Radio Station List
 
-Example files are included in the repository.
+Via web interface or SD card
 
-## Compiling from Source:
-The software has been tested with ESP-IDF 5.4 or 5.4.1 and the latest version of ESP-ADF.  
+Create `stations.txt` file on SD card in the format:
 
-Installation guide: [ESP-ADF](https://docs.espressif.com/projects/esp-adf/en/latest/get-started/index.html#quick-start)  
-Repository: [ESP-ADF on GitHub](https://github.com/espressif/esp-adf)
+```
+http://stream.url;ShortName;Long station name;0;1;audio_description
+```
 
-## Usage:
-- **Button 6** [short press]: Volume up.  
-- **Button 5** [short press]: Volume down, [long press]: Mute.  
-- **Button 4** [short press]: Next station on the list, [long press]: Return to station 1. LED flashes according to the station number.  
-- **Button 3** [short press]: Previous station on the list, [long press]: Favorite station (first favorite on the list). LED flashes according to the station number.  
-- **Button 2** [short press]: Start recording (LED flashes twice every 3 seconds), [long press]: Stop recording (LED flashes 3 times).
-- **Button 1** [short press]: move to the next equalizer setting, [long press] return to the setting without equalizer.
+**Example:**
 
-Inserting an SD card reloads the station list. If no list is found, the default list is used.
+```
+http://mp3.polskieradio.pl:8904/;PR3;Polskie Radio Program Trzeci;0;1;
+http://stream2.nadaje.com:9248/prw.aac;RW;Radio Wrocław;0;5;
+```
 
-Audio files are saved in the `rec/data_recording` folder with an additional common text file containing the audio file path, station name and recording start time.
+### Equalizer Presets
+
+Create `eq.txt` file on the SD card:
+
+```
+flat;0;0;0;0;0;0;0;0;0;0
+music;2;3;1;0;-1;-2;0;1;2;0
+rock;4;5;3;1;-1;-3;-1;3;4;0
+```
+
+Always 10 EQ values in dB.
+
+**Note:** all config files must be saved in the root of the SD card.
+
+## 🌐 Web Server
+
+### Access
+
+- **Auto discovery:** `http://radiojkk32.local` (via mDNS/Bonjour). NetBIOS: `RadioJKK`
+- **Direct IP:** `http://[device-ip-address]`
+- **Port:** 80 (default)
+
+### Web Server Functions
+
+- 📻 **Playback control** (play/pause/stop)
+- 🔊 **Real-time volume control**
+- 📋 **Station selection** with full list
+- 📋 **Edit station list** without physical access
+
+## 🎠 Button Controls (OLED-less Mode)
+
+| Button        | Short Press          | Long Press         |
+| ------------- | -------------------- | ------------------ |
+| **PLAY** KEY3 | Previous station     | Favorite station   |
+| **SET** KEY4  | Next station         | First station      |
+| **MODE** KEY2 | Next equalizer       | Reset equalizer    |
+| **REC** KEY1  | Start recording      | Stop recording     |
+| **VOL+** KEY6 | Volume up            | -                  |
+| **VOL-** KEY5 | Volume down          | Mute               |
+
+## 🖥️ OLED Operation (if enabled)
+
+| Button              | Short Press                | Long Press           |
+| ------------------- | -------------------------- | -------------------- |
+| **MODE** KEY1       | Station list/Confirm       | Close [ESC]          |
+| **SET** KEY2        | Equalizer list             | Recording start/stop |
+| **VOL+/-** KEY4/KEY3| Menu navigation / Volume   | Mute / Favorite      |
+
+## ⚖️ Configuration Options
+
+The project offers rich configuration via `menuconfig`:
+
+```bash
+idf.py menuconfig
+```
+
+### Available options:
+
+- **Display type:** SSD1306/SH1107
+- **Resolution:** 128x64
+- **Button type:** GPIO
+- **Board variant:** ESP32-A1S
+- **SD card:** enable/disable
+- **External keys:** optional
+
+## 🌍 Internationalization
+
+The project supports Polish diacritics with automatic UTF-8 to ASCII conversion for monochrome displays.
+
+## 🤝 Contribution
+
+You're welcome to contribute to the project!
+
+1. **Fork** the repository
+2. **Create a branch** for your feature
+3. **Add changes** with descriptive commits
+4. **Submit a Pull Request**
+
+## 📄 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+## 👏 Credits
+
+- **Espressif Systems** for ESP-IDF and ESP-ADF
+- **LVGL** for the graphics library
+- **Open-source community** for support and inspiration
+
+## 📞 Contact
+
+- **Author:** Jaromir K. Kopp (JKK)
+- **GitHub:** [MacWyznawca](https://github.com/MacWyznawca)
+
+---
+
+**RadioJKK32** – Internet radio with web control 🎵
+
