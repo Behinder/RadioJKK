@@ -48,3 +48,4 @@ docs/doxygen_sqlite3.db
 #CTags
 tags
 
+.vscode/*
