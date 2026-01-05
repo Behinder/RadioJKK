@@ -1,0 +1,2 @@
+/Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-ar qc libai-thinker-esp32-a1s.a "CMakeFiles/__idf_ai-thinker-esp32-a1s.dir/ai_thinker_esp32_a1s/board.c.obj" "CMakeFiles/__idf_ai-thinker-esp32-a1s.dir/ai_thinker_esp32_a1s/board_pins_config.c.obj"
+/Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib libai-thinker-esp32-a1s.a

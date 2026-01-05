@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "esp-idf/mbedtls/mbedtls",
+		"source" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls"
+	}
+}

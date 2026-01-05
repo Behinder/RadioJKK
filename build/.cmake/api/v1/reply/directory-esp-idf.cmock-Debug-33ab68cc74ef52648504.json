@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "esp-idf/cmock",
+		"source" : "/Users/sebastian/src/esp-adf/esp-idf/components/cmock"
+	}
+}

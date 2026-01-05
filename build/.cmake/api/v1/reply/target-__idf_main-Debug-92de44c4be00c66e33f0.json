@@ -1,0 +1,3041 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "esp-idf/main/libmain.a"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"idf_component_register",
+			"register_component",
+			"set_property",
+			"project",
+			"add_compile_options",
+			"include",
+			"__build_process_project_includes",
+			"idf_build_process",
+			"add_definitions",
+			"add_compile_definitions",
+			"include_directories",
+			"target_include_directories",
+			"__component_add_include_dirs",
+			"add_c_compile_options",
+			"target_sources",
+			"target_add_binary_data"
+		],
+		"files" : 
+		[
+			"/Users/sebastian/src/esp-adf/esp-idf/tools/cmake/component.cmake",
+			"main/CMakeLists.txt",
+			"/Users/sebastian/src/esp-adf/esp-idf/tools/cmake/project.cmake",
+			"CMakeLists.txt",
+			"managed_components/espressif__cmake_utilities/project_include.cmake",
+			"/Users/sebastian/src/esp-adf/esp-idf/tools/cmake/build.cmake",
+			"/Users/sebastian/src/esp-adf/CMakeLists.txt",
+			"/Users/sebastian/src/esp-adf/esp-idf/tools/cmake/utilities.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 663,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 490,
+				"parent" : 2
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 9,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 742,
+				"parent" : 5
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 710,
+				"parent" : 5
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 690,
+				"parent" : 7
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 457,
+				"parent" : 8
+			},
+			{
+				"file" : 4,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 4,
+				"parent" : 10
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 475,
+				"parent" : 2
+			},
+			{
+				"command" : 6,
+				"file" : 3,
+				"line" : 5,
+				"parent" : 4
+			},
+			{
+				"file" : 6,
+				"parent" : 13
+			},
+			{
+				"command" : 9,
+				"file" : 6,
+				"line" : 5,
+				"parent" : 14
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 476,
+				"parent" : 2
+			},
+			{
+				"command" : 11,
+				"file" : 0,
+				"line" : 474,
+				"parent" : 2
+			},
+			{
+				"command" : 13,
+				"file" : 0,
+				"line" : 492,
+				"parent" : 2
+			},
+			{
+				"command" : 12,
+				"file" : 0,
+				"line" : 319,
+				"parent" : 18
+			},
+			{
+				"command" : 14,
+				"file" : 0,
+				"line" : 477,
+				"parent" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 281,
+				"parent" : 20
+			},
+			{
+				"command" : 16,
+				"file" : 0,
+				"line" : 516,
+				"parent" : 2
+			},
+			{
+				"command" : 15,
+				"file" : 7,
+				"line" : 108,
+				"parent" : 22
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -g -fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 11,
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Werror=all"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=unused-function"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=unused-variable"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=unused-but-set-variable"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=extra"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-unused-parameter"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-sign-compare"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-enum-conversion"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-gdwarf-4"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-ggdb"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-mdisable-hardware-atomics"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Os"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-freorder-blocks"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fmacro-prefix-map=/Users/sebastian/src/RadioJKK/radioJKK32=."
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fmacro-prefix-map=/Users/sebastian/src/esp-adf/esp-idf=/IDF"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fstrict-volatile-bitfields"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fno-jump-tables"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fno-tree-switch-conversion"
+				},
+				{
+					"backtrace" : 21,
+					"fragment" : "-std=gnu17"
+				},
+				{
+					"backtrace" : 21,
+					"fragment" : "-Wno-old-style-declaration"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-DESP_LCD_ILI9341_VER_MAJOR=1"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-DESP_LCD_ILI9341_VER_MINOR=2"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-DESP_LCD_ILI9341_VER_PATCH=0"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 15,
+					"define" : "ADF_VER=\"v2.7-175-g3e047321-dirty\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "ESP_PLATFORM"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "HAVE_CONFIG_H"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "IDF_VER=\"v5.4-dirty\""
+				},
+				{
+					"backtrace" : 6,
+					"define" : "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "SOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "SOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "UNITY_INCLUDE_CONFIG_H"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_GLIBCXX_HAVE_POSIX_SEMAPHORE"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_GLIBCXX_USE_POSIX_SEMAPHORE"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_POSIX_READER_WRITER_LOCKS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 17,
+					"path" : "/Users/sebastian/src/RadioJKK/build/config"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/main"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/newlib/platform_include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/config/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/config/include/freertos"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/config/xtensa/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/FreeRTOS-Kernel/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/esp_additions/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/include/soc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/include/soc/esp32"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/dma/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/ldo/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/debug_probe/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/port/esp32/."
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/port/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/heap/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/heap/tlsf"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/log/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/soc/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/soc/esp32"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/soc/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/soc/esp32/register"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/hal/platform_port/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/hal/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/hal/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_rom/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_rom/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_rom/esp32/include/esp32"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_rom/esp32"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_common/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_system/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_system/port/soc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_system/port/include/private"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/xtensa/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/xtensa/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/xtensa/deprecated_include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/include/apps"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/include/apps/sntp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/lwip/src/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/freertos/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/esp32xx/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/esp32xx/include/arch"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/esp32xx/include/sys"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_gpio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_pm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/port/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/library"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/esp_crt_bundle/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_app_format/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_bootloader_format/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/app_update/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bootloader_support/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bootloader_support/bootloader_flash/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_partition/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/efuse/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/efuse/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_mm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/spi_flash/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_security/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/pthread/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_timer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_gptimer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_ringbuf/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_uart/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/vfs/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/app_trace/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_event/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/nvs_flash/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_pcnt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_spi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_mcpwm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_ana_cmpr/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_i2s/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/sdmmc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_sdmmc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_sdspi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_sdio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_dac/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_rmt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_tsens/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_sdm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_i2c/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_ledc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_parlio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_usb_serial_jtag/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/deprecated"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/i2c/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/touch_sensor/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/twai/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/touch_sensor/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_phy/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_phy/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_vfs_console/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_netif/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wpa_supplicant/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wpa_supplicant/port/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wpa_supplicant/esp_supplicant/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_coex/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_wifi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_wifi/include/local"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_wifi/wifi_apps/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_wifi/wifi_apps/nan_app/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/include/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/osi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/api/include/api"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/btc/profile/esp/blufi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/btc/profile/esp/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/hci_log/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/host/bluedroid/api/include/api"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/porting/ext/tinycrypt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/unity/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/unity/unity/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/cmock/CMock/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/console"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/http_parser"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp-tls"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp-tls/esp-tls-crypto"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_adc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_adc/interface"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_adc/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_adc/deprecated/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_isp/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_cam/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_cam/interface"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_jpeg/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_ppa/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_eth/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_gdbstub/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hid/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/tcp_transport/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_http_client/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_http_server/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_https_ota/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_https_server/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_psram/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_lcd/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_lcd/interface"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protobuf-c/protobuf-c"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/include/common"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/include/security"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/include/transports"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/include/crypto/srp6a"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/proto-c"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_local_ctrl/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/espcoredump/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/espcoredump/include/port/xtensa"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wear_levelling/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/fatfs/diskio"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/fatfs/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/fatfs/vfs"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/idf_test/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/idf_test/include/esp32"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/ieee802154/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/json/cJSON"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mqtt/esp-mqtt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/nvs_sec_provider/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/perfmon/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/rt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/spiffs/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wifi_provisioning/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__jsmn/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_sal/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/adf_utils/cloud_services/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/adf_utils/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/display_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/display_service/led_indicator/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/display_service/led_bar/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_dispatcher/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es8388"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es8374"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es8311"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es8156"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es7243"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es7148"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es7210"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es7243e"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/tas5805m"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/zl38063"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/zl38063/api_lib"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/zl38063/example_apps"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/zl38063/firmware"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__nghttp/port/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__nghttp/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_audio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_codec/include/codec"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_codec/include/processing"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_new_jpeg/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/media_lib_sal/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/media_lib_sal/include/port"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_muxer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_media_protocols/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_pipeline/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/adc_button"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/gpio_isr"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/button"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/blufi"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/IS31FL3216"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/aw2013"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/tca9554"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/driver/i2c_bus"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/sdcard"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/touch"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_board/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/components/ai-thinker-esp32-a1s/ai_thinker_esp32_a1s"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp_lcd_ili9341/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_mixer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__dl_fft"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__dl_fft/base"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__dl_fft/base/isa"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/dotprod/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/support/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/support/mem/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/hann/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/blackman/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/blackman_harris/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/blackman_nuttall/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/nuttall/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/flat_top/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/iir/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/fir/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/add/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/sub/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/mul/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/addc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/mulc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/sqrt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/mul/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/add/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/addc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/mulc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/sub/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/fft/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/dct/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/conv/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/common/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/mul/test/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/kalman/ekf/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/kalman/ekf_imu13states/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-sr/esp-tts/esp_tts_chinese/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-sr/include/esp32"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-sr/src/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_recorder/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/wifi_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__zlib/zlib"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/clouds/dueros/lightduer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/clouds/volc_engine_rtc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/dueros_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_actions/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/tone_partition/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_stream/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/battery_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/battery_service/monitors/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/bluetooth_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/coredump_upload_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_codec_dev/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_codec_dev/interface"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_codec_dev/device/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp_websocket_client/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_coze/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_event_cast/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/input_key_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/ota_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/playlist/include"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-mlongcalls  -g"
+				},
+				{
+					"backtrace" : 11,
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Werror=all"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=unused-function"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=unused-variable"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=unused-but-set-variable"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-error=extra"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-unused-parameter"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-sign-compare"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Wno-enum-conversion"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-gdwarf-4"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-ggdb"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-mdisable-hardware-atomics"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Os"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-freorder-blocks"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fmacro-prefix-map=/Users/sebastian/src/RadioJKK/radioJKK32=."
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fmacro-prefix-map=/Users/sebastian/src/esp-adf/esp-idf=/IDF"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fstrict-volatile-bitfields"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fno-jump-tables"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-fno-tree-switch-conversion"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-DESP_LCD_ILI9341_VER_MAJOR=1"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-DESP_LCD_ILI9341_VER_MINOR=2"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-DESP_LCD_ILI9341_VER_PATCH=0"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 15,
+					"define" : "ADF_VER=\"v2.7-175-g3e047321-dirty\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "ESP_PLATFORM"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "HAVE_CONFIG_H"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "IDF_VER=\"v5.4-dirty\""
+				},
+				{
+					"backtrace" : 6,
+					"define" : "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "SOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "SOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "UNITY_INCLUDE_CONFIG_H"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_GLIBCXX_HAVE_POSIX_SEMAPHORE"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_GLIBCXX_USE_POSIX_SEMAPHORE"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_GNU_SOURCE"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "_POSIX_READER_WRITER_LOCKS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 17,
+					"path" : "/Users/sebastian/src/RadioJKK/build/config"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/main"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/newlib/platform_include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/config/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/config/include/freertos"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/config/xtensa/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/FreeRTOS-Kernel/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/freertos/esp_additions/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/include/soc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/include/soc/esp32"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/dma/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/ldo/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/debug_probe/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/port/esp32/."
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hw_support/port/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/heap/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/heap/tlsf"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/log/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/soc/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/soc/esp32"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/soc/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/soc/esp32/register"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/hal/platform_port/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/hal/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/hal/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_rom/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_rom/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_rom/esp32/include/esp32"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_rom/esp32"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_common/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_system/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_system/port/soc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_system/port/include/private"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/xtensa/esp32/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/xtensa/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/xtensa/deprecated_include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/include/apps"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/include/apps/sntp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/lwip/src/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/freertos/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/esp32xx/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/esp32xx/include/arch"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/lwip/port/esp32xx/include/sys"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_gpio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_pm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/port/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/library"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/esp_crt_bundle/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_app_format/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_bootloader_format/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/app_update/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bootloader_support/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bootloader_support/bootloader_flash/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_partition/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/efuse/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/efuse/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_mm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/spi_flash/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_security/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/pthread/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_timer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_gptimer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_ringbuf/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_uart/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/vfs/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/app_trace/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_event/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/nvs_flash/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_pcnt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_spi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_mcpwm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_ana_cmpr/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_i2s/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/sdmmc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_sdmmc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_sdspi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_sdio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_dac/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_rmt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_tsens/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_sdm/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_i2c/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_ledc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_parlio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_usb_serial_jtag/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/deprecated"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/i2c/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/touch_sensor/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/twai/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/driver/touch_sensor/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_phy/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_phy/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_vfs_console/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_netif/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wpa_supplicant/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wpa_supplicant/port/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wpa_supplicant/esp_supplicant/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_coex/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_wifi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_wifi/include/local"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_wifi/wifi_apps/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_wifi/wifi_apps/nan_app/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/include/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/osi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/api/include/api"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/btc/profile/esp/blufi/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/btc/profile/esp/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/common/hci_log/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/host/bluedroid/api/include/api"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/bt/porting/ext/tinycrypt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/unity/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/unity/unity/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/cmock/CMock/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/console"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/http_parser"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp-tls"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp-tls/esp-tls-crypto"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_adc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_adc/interface"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_adc/esp32/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_adc/deprecated/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_isp/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_cam/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_cam/interface"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_jpeg/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_driver_ppa/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_eth/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_gdbstub/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_hid/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/tcp_transport/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_http_client/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_http_server/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_https_ota/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_https_server/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_psram/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_lcd/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_lcd/interface"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protobuf-c/protobuf-c"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/include/common"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/include/security"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/include/transports"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/include/crypto/srp6a"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/protocomm/proto-c"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/esp_local_ctrl/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/espcoredump/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/espcoredump/include/port/xtensa"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wear_levelling/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/fatfs/diskio"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/fatfs/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/fatfs/vfs"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/idf_test/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/idf_test/include/esp32"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/ieee802154/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/json/cJSON"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/mqtt/esp-mqtt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/nvs_sec_provider/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/perfmon/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/rt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/spiffs/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/esp-idf/components/wifi_provisioning/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__jsmn/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_sal/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/adf_utils/cloud_services/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/adf_utils/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/display_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/display_service/led_indicator/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/display_service/led_bar/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_dispatcher/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es8388"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es8374"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es8311"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es8156"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es7243"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es7148"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es7210"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/es7243e"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/tas5805m"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/zl38063"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/zl38063/api_lib"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/zl38063/example_apps"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_hal/driver/zl38063/firmware"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__nghttp/port/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__nghttp/nghttp2/lib/includes"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_audio/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_codec/include/codec"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_codec/include/processing"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_new_jpeg/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/media_lib_sal/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/media_lib_sal/include/port"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_muxer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-adf-libs/esp_media_protocols/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_pipeline/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/adc_button"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/gpio_isr"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/button"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/blufi"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/IS31FL3216"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/aw2013"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/tca9554"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/driver/i2c_bus"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/sdcard"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_peripherals/lib/touch"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_board/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/components/ai-thinker-esp32-a1s/ai_thinker_esp32_a1s"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp_lcd_ili9341/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_mixer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__dl_fft"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__dl_fft/base"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__dl_fft/base/isa"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/dotprod/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/support/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/support/mem/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/hann/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/blackman/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/blackman_harris/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/blackman_nuttall/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/nuttall/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/windows/flat_top/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/iir/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/fir/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/add/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/sub/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/mul/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/addc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/mulc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/math/sqrt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/mul/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/add/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/addc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/mulc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/sub/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/fft/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/dct/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/conv/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/common/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/matrix/mul/test/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/kalman/ekf/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/modules/kalman/ekf_imu13states/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-sr/esp-tts/esp_tts_chinese/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-sr/include/esp32"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp-sr/src/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_recorder/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/wifi_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__zlib/zlib"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/clouds/dueros/lightduer/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/clouds/volc_engine_rtc/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/dueros_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_actions/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/tone_partition/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/audio_stream/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/battery_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/battery_service/monitors/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/bluetooth_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/coredump_upload_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_codec_dev/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_codec_dev/interface"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_codec_dev/device/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp_websocket_client/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_coze/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/esp_event_cast/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/input_key_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/ota_service/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/sebastian/src/esp-adf/components/playlist/include"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				4
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "__idf_xtensa::@1daaaad7abe597e030f9"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_app_trace::@dd7eb3aa23293586d3b8"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_bt::@0a9ab9982b985d43ed2a"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_unity::@fec746937506b5690992"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_cmock::@38f9eb59693b7394f54c"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_console::@4311ed8d271cc0ee1422"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_https_server::@a47490a9e49b7eabdb18"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_lcd::@d5a84597e1633c9ab0d3"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_driver_cam::@d005630ea6316acc7c7d"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_eth::@68140d310044213ed0bc"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_hid::@15df40e16a5d8775dd9b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_protobuf-c::@b14513c4bd859268ec22"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_protocomm::@d76d01c8dec06205e1fc"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_local_ctrl::@d6aad58d2946e56208ef"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_espcoredump::@718b9a7d55ab42cfc0a3"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_wear_levelling::@cb21b0d7c0815cff11c6"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_fatfs::@75ac1d9b25dacc8cc9e7"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_json::@c78a8bdc820334f01148"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_mqtt::@c1ab2c6a99226d1f4b56"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_nvs_sec_provider::@06580cba064af97f59fd"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_perfmon::@aac0f647c32bb8f54a67"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_rt::@c044be52929cb104e3c1"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_spiffs::@df881b71474064c86689"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_audio_sal::@4b5aa6d010c2e566ab09"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_adf_utils::@628f95e47c74c99f6522"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_display_service::@bb37bc0ebc710ad832de"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_dispatcher::@ea3ac7fd9adedbfd8157"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_espressif__nghttp::@146cfa4e83ff647e449c"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp-adf-libs::@e9946507740d51eb663f"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_espressif__esp_lcd_ili9341::@bbc5a9082872ac936ffd"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_audio_mixer::@40894f4c51579db7bc82"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_espressif__dl_fft::@3ccf17c791098cd2e665"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_espressif__esp-dsp::@173cdc30d8d2ec42511f"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp-sr::@6828f65c7fa66837081c"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_audio_recorder::@ae5e83c50a0caefe9873"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_wifi_service::@5ffd7d98d6ac4233f7c7"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_espressif__zlib::@ad6b4831310f18d3cb4b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_tone_partition::@819aa2d4929edf3893d6"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_audio_stream::@74d1a4ca470a105084ee"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_battery_service::@14d967bdf1d0e2024315"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_bluetooth_service::@7a29cb907136157a7557"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_coredump_upload_service::@94321fede0cd259f72fa"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_codec_dev::@04e1e02a01c314fba0a2"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_espressif__esp_websocket_client::@0ba9b7230891ef7e3890"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_coze::@5aaf6088ad052eb2ddce"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp_event_cast::@d33f182942a5c443373f"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_input_key_service::@4e2e2d6ee03ceaded4bd"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_ota_service::@b04b21b1c98cf1562262"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_playlist::@c00c3e961d931cd475bf"
+		}
+	],
+	"id" : "__idf_main::@7368607ed66887415643",
+	"name" : "__idf_main",
+	"nameOnDisk" : "libmain.a",
+	"paths" : 
+	{
+		"build" : "esp-idf/main",
+		"source" : "main"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				4,
+				5
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "main/radio_jkk.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "main/RawSplit/raw_split.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "main/jkk_audio_main.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "main/jkk_audio_sdwrite.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 23,
+			"compileGroupIndex" : 1,
+			"isGenerated" : true,
+			"path" : "/Users/sebastian/src/RadioJKK/build/stations.txt.S",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"path" : "stations.txt",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

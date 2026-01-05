@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "esp-idf/ai-thinker-esp32-a1s",
+		"source" : "components/ai-thinker-esp32-a1s"
+	}
+}

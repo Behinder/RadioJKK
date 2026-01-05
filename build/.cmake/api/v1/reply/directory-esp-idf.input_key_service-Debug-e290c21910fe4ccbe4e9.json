@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "esp-idf/input_key_service",
+		"source" : "/Users/sebastian/src/esp-adf/components/input_key_service"
+	}
+}
