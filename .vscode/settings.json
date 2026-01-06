@@ -1,6 +1,0 @@
-{
-    "cmake.sourceDirectory": "/Users/sebastian/src/RadioJKK/radioJKK32",
-    "cmake.environment": {
-    "PYTHON": "/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python"
-  }
-}
