@@ -67,7 +67,7 @@ include CMakeFiles/size-components.dir/compiler_depend.make
 include CMakeFiles/size-components.dir/progress.make
 
 CMakeFiles/size-components: RadioJKK.map
-	/opt/local/bin/cmake -D "IDF_SIZE_TOOL=python;-m;esp_idf_size" -D IDF_SIZE_MODE=--archives -D MAP_FILE=/Users/sebastian/src/RadioJKK/build/RadioJKK.map -D OUTPUT_JSON= -P /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/run_size_tool.cmake
+	/opt/local/bin/cmake -D "IDF_SIZE_TOOL=/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python;-m;esp_idf_size" -D IDF_SIZE_MODE=--archives -D MAP_FILE=/Users/sebastian/src/RadioJKK/build/RadioJKK.map -D OUTPUT_JSON= -P /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/run_size_tool.cmake
 
 CMakeFiles/size-components.dir/codegen:
 .PHONY : CMakeFiles/size-components.dir/codegen

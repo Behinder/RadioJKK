@@ -67,7 +67,7 @@ include CMakeFiles/merge-bin.dir/compiler_depend.make
 include CMakeFiles/merge-bin.dir/progress.make
 
 CMakeFiles/merge-bin:
-	cd /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py && /opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "SERIAL_TOOL=python;;/Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=merge_bin;-o;/Users/sebastian/src/RadioJKK/build/merged-binary.bin;@/Users/sebastian/src/RadioJKK/build/flash_args" -D WORKING_DIRECTORY=/Users/sebastian/src/RadioJKK/build -P run_serial_tool.cmake
+	cd /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py && /opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "SERIAL_TOOL=/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python;;/Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=merge_bin;-o;/Users/sebastian/src/RadioJKK/build/merged-binary.bin;@/Users/sebastian/src/RadioJKK/build/flash_args" -D WORKING_DIRECTORY=/Users/sebastian/src/RadioJKK/build -P run_serial_tool.cmake
 
 CMakeFiles/merge-bin.dir/codegen:
 .PHONY : CMakeFiles/merge-bin.dir/codegen

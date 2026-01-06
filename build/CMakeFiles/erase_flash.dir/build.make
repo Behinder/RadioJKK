@@ -67,7 +67,7 @@ include CMakeFiles/erase_flash.dir/compiler_depend.make
 include CMakeFiles/erase_flash.dir/progress.make
 
 CMakeFiles/erase_flash:
-	cd /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py && /opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "SERIAL_TOOL=python;;/Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D SERIAL_TOOL_ARGS=erase_flash -P run_serial_tool.cmake
+	cd /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py && /opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "SERIAL_TOOL=/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python;;/Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D SERIAL_TOOL_ARGS=erase_flash -P run_serial_tool.cmake
 
 CMakeFiles/erase_flash.dir/codegen:
 .PHONY : CMakeFiles/erase_flash.dir/codegen

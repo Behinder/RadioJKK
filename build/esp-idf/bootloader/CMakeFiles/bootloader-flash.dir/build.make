@@ -67,7 +67,7 @@ include esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/compiler_depend.make
 include esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/progress.make
 
 esp-idf/bootloader/CMakeFiles/bootloader-flash:
-	cd /Users/sebastian/src/esp-adf/esp-idf/components/bootloader && /opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "SERIAL_TOOL=python;;/Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@bootloader-flash_args" -D WORKING_DIRECTORY=/Users/sebastian/src/RadioJKK/build -P /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/run_serial_tool.cmake
+	cd /Users/sebastian/src/esp-adf/esp-idf/components/bootloader && /opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "SERIAL_TOOL=/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python;;/Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@bootloader-flash_args" -D WORKING_DIRECTORY=/Users/sebastian/src/RadioJKK/build -P /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/run_serial_tool.cmake
 
 esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/codegen:
 .PHONY : esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/codegen

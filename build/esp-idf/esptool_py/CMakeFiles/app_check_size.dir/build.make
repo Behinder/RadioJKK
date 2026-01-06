@@ -67,7 +67,7 @@ include esp-idf/esptool_py/CMakeFiles/app_check_size.dir/compiler_depend.make
 include esp-idf/esptool_py/CMakeFiles/app_check_size.dir/progress.make
 
 esp-idf/esptool_py/CMakeFiles/app_check_size:
-	cd /Users/sebastian/src/RadioJKK/build/esp-idf/esptool_py && python /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/sebastian/src/RadioJKK/build/partition_table/partition-table.bin /Users/sebastian/src/RadioJKK/build/RadioJKK.bin
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/esptool_py && /Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/sebastian/src/RadioJKK/build/partition_table/partition-table.bin /Users/sebastian/src/RadioJKK/build/RadioJKK.bin
 
 esp-idf/esptool_py/CMakeFiles/app_check_size.dir/codegen:
 .PHONY : esp-idf/esptool_py/CMakeFiles/app_check_size.dir/codegen

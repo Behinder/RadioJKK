@@ -69,7 +69,7 @@ include esp-idf/partition_table/CMakeFiles/partition-table.dir/progress.make
 esp-idf/partition_table/CMakeFiles/partition-table:
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /opt/local/bin/cmake -E echo "Partition table binary generated. Contents:"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /opt/local/bin/cmake -E echo "*******************************************************************************"
-	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && python /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB -- /Users/sebastian/src/RadioJKK/build/partition_table/partition-table.bin
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB -- /Users/sebastian/src/RadioJKK/build/partition_table/partition-table.bin
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /opt/local/bin/cmake -E echo "*******************************************************************************"
 
 esp-idf/partition_table/CMakeFiles/partition-table.dir/codegen:

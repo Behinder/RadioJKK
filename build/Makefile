@@ -1878,6 +1878,45 @@ __idf_wifi_provisioning/fast:
 .PHONY : __idf_wifi_provisioning/fast
 
 #=============================================================================
+# Target rules for targets named __idf_lvgl__lvgl
+
+# Build rule for target.
+__idf_lvgl__lvgl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_lvgl__lvgl
+.PHONY : __idf_lvgl__lvgl
+
+# fast build rule for target.
+__idf_lvgl__lvgl/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/build.make esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/build
+.PHONY : __idf_lvgl__lvgl/fast
+
+#=============================================================================
+# Target rules for targets named __idf_espressif__esp_lcd_sh1107
+
+# Build rule for target.
+__idf_espressif__esp_lcd_sh1107: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_espressif__esp_lcd_sh1107
+.PHONY : __idf_espressif__esp_lcd_sh1107
+
+# fast build rule for target.
+__idf_espressif__esp_lcd_sh1107/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/espressif__esp_lcd_sh1107/CMakeFiles/__idf_espressif__esp_lcd_sh1107.dir/build.make esp-idf/espressif__esp_lcd_sh1107/CMakeFiles/__idf_espressif__esp_lcd_sh1107.dir/build
+.PHONY : __idf_espressif__esp_lcd_sh1107/fast
+
+#=============================================================================
+# Target rules for targets named __idf_espressif__mdns
+
+# Build rule for target.
+__idf_espressif__mdns: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_espressif__mdns
+.PHONY : __idf_espressif__mdns
+
+# fast build rule for target.
+__idf_espressif__mdns/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/espressif__mdns/CMakeFiles/__idf_espressif__mdns.dir/build.make esp-idf/espressif__mdns/CMakeFiles/__idf_espressif__mdns.dir/build
+.PHONY : __idf_espressif__mdns/fast
+
+#=============================================================================
 # Target rules for targets named __idf_main
 
 # Build rule for target.
@@ -2464,7 +2503,9 @@ help:
 	@echo "... __idf_espressif__dl_fft"
 	@echo "... __idf_espressif__esp-dsp"
 	@echo "... __idf_espressif__esp_lcd_ili9341"
+	@echo "... __idf_espressif__esp_lcd_sh1107"
 	@echo "... __idf_espressif__esp_websocket_client"
+	@echo "... __idf_espressif__mdns"
 	@echo "... __idf_espressif__nghttp"
 	@echo "... __idf_espressif__zlib"
 	@echo "... __idf_fatfs"
@@ -2475,6 +2516,7 @@ help:
 	@echo "... __idf_input_key_service"
 	@echo "... __idf_json"
 	@echo "... __idf_log"
+	@echo "... __idf_lvgl__lvgl"
 	@echo "... __idf_lwip"
 	@echo "... __idf_main"
 	@echo "... __idf_mbedtls"

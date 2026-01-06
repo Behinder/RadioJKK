@@ -199,6 +199,14 @@ RawSplit/raw_split.c.s:
 	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.s
 .PHONY : RawSplit/raw_split.c.s
 
+__/__/index.html.obj: __/__/index.html.S.obj
+.PHONY : __/__/index.html.obj
+
+# target to build an object file
+__/__/index.html.S.obj:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/__/index.html.S.obj
+.PHONY : __/__/index.html.S.obj
+
 __/__/stations.txt.obj: __/__/stations.txt.S.obj
 .PHONY : __/__/stations.txt.obj
 
@@ -206,6 +214,30 @@ __/__/stations.txt.obj: __/__/stations.txt.S.obj
 __/__/stations.txt.S.obj:
 	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj
 .PHONY : __/__/stations.txt.S.obj
+
+display/jkk_tools.obj: display/jkk_tools.c.obj
+.PHONY : display/jkk_tools.obj
+
+# target to build an object file
+display/jkk_tools.c.obj:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj
+.PHONY : display/jkk_tools.c.obj
+
+display/jkk_tools.i: display/jkk_tools.c.i
+.PHONY : display/jkk_tools.i
+
+# target to preprocess a source file
+display/jkk_tools.c.i:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.i
+.PHONY : display/jkk_tools.c.i
+
+display/jkk_tools.s: display/jkk_tools.c.s
+.PHONY : display/jkk_tools.s
+
+# target to generate assembly for a file
+display/jkk_tools.c.s:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.s
+.PHONY : display/jkk_tools.c.s
 
 jkk_audio_main.obj: jkk_audio_main.c.obj
 .PHONY : jkk_audio_main.obj
@@ -255,6 +287,54 @@ jkk_audio_sdwrite.c.s:
 	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.s
 .PHONY : jkk_audio_sdwrite.c.s
 
+jkk_nvs.obj: jkk_nvs.c.obj
+.PHONY : jkk_nvs.obj
+
+# target to build an object file
+jkk_nvs.c.obj:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.obj
+.PHONY : jkk_nvs.c.obj
+
+jkk_nvs.i: jkk_nvs.c.i
+.PHONY : jkk_nvs.i
+
+# target to preprocess a source file
+jkk_nvs.c.i:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.i
+.PHONY : jkk_nvs.c.i
+
+jkk_nvs.s: jkk_nvs.c.s
+.PHONY : jkk_nvs.s
+
+# target to generate assembly for a file
+jkk_nvs.c.s:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.s
+.PHONY : jkk_nvs.c.s
+
+jkk_settings.obj: jkk_settings.c.obj
+.PHONY : jkk_settings.obj
+
+# target to build an object file
+jkk_settings.c.obj:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.obj
+.PHONY : jkk_settings.c.obj
+
+jkk_settings.i: jkk_settings.c.i
+.PHONY : jkk_settings.i
+
+# target to preprocess a source file
+jkk_settings.c.i:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.i
+.PHONY : jkk_settings.c.i
+
+jkk_settings.s: jkk_settings.c.s
+.PHONY : jkk_settings.s
+
+# target to generate assembly for a file
+jkk_settings.c.s:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.s
+.PHONY : jkk_settings.c.s
+
 radio_jkk.obj: radio_jkk.c.obj
 .PHONY : radio_jkk.obj
 
@@ -279,6 +359,30 @@ radio_jkk.c.s:
 	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.s
 .PHONY : radio_jkk.c.s
 
+web_server.obj: web_server.c.obj
+.PHONY : web_server.obj
+
+# target to build an object file
+web_server.c.obj:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj
+.PHONY : web_server.c.obj
+
+web_server.i: web_server.c.i
+.PHONY : web_server.i
+
+# target to preprocess a source file
+web_server.c.i:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.i
+.PHONY : web_server.c.i
+
+web_server.s: web_server.c.s
+.PHONY : web_server.s
+
+# target to generate assembly for a file
+web_server.c.s:
+	cd /Users/sebastian/src/RadioJKK/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.s
+.PHONY : web_server.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -295,16 +399,29 @@ help:
 	@echo "... RawSplit/raw_split.obj"
 	@echo "... RawSplit/raw_split.i"
 	@echo "... RawSplit/raw_split.s"
+	@echo "... __/__/index.html.obj"
 	@echo "... __/__/stations.txt.obj"
+	@echo "... display/jkk_tools.obj"
+	@echo "... display/jkk_tools.i"
+	@echo "... display/jkk_tools.s"
 	@echo "... jkk_audio_main.obj"
 	@echo "... jkk_audio_main.i"
 	@echo "... jkk_audio_main.s"
 	@echo "... jkk_audio_sdwrite.obj"
 	@echo "... jkk_audio_sdwrite.i"
 	@echo "... jkk_audio_sdwrite.s"
+	@echo "... jkk_nvs.obj"
+	@echo "... jkk_nvs.i"
+	@echo "... jkk_nvs.s"
+	@echo "... jkk_settings.obj"
+	@echo "... jkk_settings.i"
+	@echo "... jkk_settings.s"
 	@echo "... radio_jkk.obj"
 	@echo "... radio_jkk.i"
 	@echo "... radio_jkk.s"
+	@echo "... web_server.obj"
+	@echo "... web_server.i"
+	@echo "... web_server.s"
 .PHONY : help
 
 

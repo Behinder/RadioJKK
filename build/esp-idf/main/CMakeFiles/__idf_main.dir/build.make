@@ -74,13 +74,18 @@ stations.txt.S: /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/scripts/data_fi
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../stations.txt.S"
 	/opt/local/bin/cmake -D DATA_FILE=/Users/sebastian/src/RadioJKK/radioJKK32/stations.txt -D SOURCE_FILE=/Users/sebastian/src/RadioJKK/build/stations.txt.S -D FILE_TYPE=TEXT -P /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/scripts/data_file_embed_asm.cmake
 
+index.html.S: /Users/sebastian/src/RadioJKK/radioJKK32/index.html
+index.html.S: /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/scripts/data_file_embed_asm.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../../index.html.S"
+	/opt/local/bin/cmake -D DATA_FILE=/Users/sebastian/src/RadioJKK/radioJKK32/index.html -D SOURCE_FILE=/Users/sebastian/src/RadioJKK/build/index.html.S -D FILE_TYPE=TEXT -P /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/scripts/data_file_embed_asm.cmake
+
 esp-idf/main/CMakeFiles/__idf_main.dir/codegen:
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/codegen
 
 esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.obj: /Users/sebastian/src/RadioJKK/radioJKK32/main/radio_jkk.c
 esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.obj"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.obj -MF CMakeFiles/__idf_main.dir/radio_jkk.c.obj.d -o CMakeFiles/__idf_main.dir/radio_jkk.c.obj -c /Users/sebastian/src/RadioJKK/radioJKK32/main/radio_jkk.c
 
 esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.i: cmake_force
@@ -94,7 +99,7 @@ esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.s: cmake_force
 esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj: /Users/sebastian/src/RadioJKK/radioJKK32/main/RawSplit/raw_split.c
 esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj -MF CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj.d -o CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj -c /Users/sebastian/src/RadioJKK/radioJKK32/main/RawSplit/raw_split.c
 
 esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.i: cmake_force
@@ -105,10 +110,24 @@ esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.s"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sebastian/src/RadioJKK/radioJKK32/main/RawSplit/raw_split.c -o CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.s
 
+esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj: /Users/sebastian/src/RadioJKK/radioJKK32/main/display/jkk_tools.c
+esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj -MF CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj.d -o CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj -c /Users/sebastian/src/RadioJKK/radioJKK32/main/display/jkk_tools.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_main.dir/display/jkk_tools.c.i"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sebastian/src/RadioJKK/radioJKK32/main/display/jkk_tools.c > CMakeFiles/__idf_main.dir/display/jkk_tools.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/display/jkk_tools.c.s"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sebastian/src/RadioJKK/radioJKK32/main/display/jkk_tools.c -o CMakeFiles/__idf_main.dir/display/jkk_tools.c.s
+
 esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj: /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_audio_main.c
 esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj -MF CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj.d -o CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj -c /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_audio_main.c
 
 esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.i: cmake_force
@@ -122,7 +141,7 @@ esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.s: cmake_force
 esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj: /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_audio_sdwrite.c
 esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj -MF CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj.d -o CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj -c /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_audio_sdwrite.c
 
 esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.i: cmake_force
@@ -133,9 +152,51 @@ esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.s"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_audio_sdwrite.c -o CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.s
 
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.obj: /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_nvs.c
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.obj"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.obj -MF CMakeFiles/__idf_main.dir/jkk_nvs.c.obj.d -o CMakeFiles/__idf_main.dir/jkk_nvs.c.obj -c /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_nvs.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_main.dir/jkk_nvs.c.i"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_nvs.c > CMakeFiles/__idf_main.dir/jkk_nvs.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/jkk_nvs.c.s"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_nvs.c -o CMakeFiles/__idf_main.dir/jkk_nvs.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.obj: /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_settings.c
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.obj"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.obj -MF CMakeFiles/__idf_main.dir/jkk_settings.c.obj.d -o CMakeFiles/__idf_main.dir/jkk_settings.c.obj -c /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_settings.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_main.dir/jkk_settings.c.i"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_settings.c > CMakeFiles/__idf_main.dir/jkk_settings.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/jkk_settings.c.s"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sebastian/src/RadioJKK/radioJKK32/main/jkk_settings.c -o CMakeFiles/__idf_main.dir/jkk_settings.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: /Users/sebastian/src/RadioJKK/radioJKK32/main/web_server.c
+esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj -MF CMakeFiles/__idf_main.dir/web_server.c.obj.d -o CMakeFiles/__idf_main.dir/web_server.c.obj -c /Users/sebastian/src/RadioJKK/radioJKK32/main/web_server.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_main.dir/web_server.c.i"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sebastian/src/RadioJKK/radioJKK32/main/web_server.c > CMakeFiles/__idf_main.dir/web_server.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/web_server.c.s"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sebastian/src/RadioJKK/radioJKK32/main/web_server.c -o CMakeFiles/__idf_main.dir/web_server.c.s
+
 esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj: stations.txt.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj -c /Users/sebastian/src/RadioJKK/build/stations.txt.S
 
 esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stations.txt.S.i: cmake_force
@@ -146,25 +207,48 @@ esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stations.txt.S.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/__idf_main.dir/__/__/stations.txt.S.s"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /Users/sebastian/src/RadioJKK/build/stations.txt.S -o CMakeFiles/__idf_main.dir/__/__/stations.txt.S.s
 
+esp-idf/main/CMakeFiles/__idf_main.dir/__/__/index.html.S.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/__/__/index.html.S.obj: index.html.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/index.html.S.obj"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/__idf_main.dir/__/__/index.html.S.obj -c /Users/sebastian/src/RadioJKK/build/index.html.S
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/__/index.html.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/__idf_main.dir/__/__/index.html.S.i"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /Users/sebastian/src/RadioJKK/build/index.html.S > CMakeFiles/__idf_main.dir/__/__/index.html.S.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/__/index.html.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/__idf_main.dir/__/__/index.html.S.s"
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && /Users/sebastian/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /Users/sebastian/src/RadioJKK/build/index.html.S -o CMakeFiles/__idf_main.dir/__/__/index.html.S.s
+
 # Object files for target __idf_main
 __idf_main_OBJECTS = \
 "CMakeFiles/__idf_main.dir/radio_jkk.c.obj" \
 "CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj" \
+"CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj" \
 "CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj" \
 "CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj" \
-"CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj"
+"CMakeFiles/__idf_main.dir/jkk_nvs.c.obj" \
+"CMakeFiles/__idf_main.dir/jkk_settings.c.obj" \
+"CMakeFiles/__idf_main.dir/web_server.c.obj" \
+"CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj" \
+"CMakeFiles/__idf_main.dir/__/__/index.html.S.obj"
 
 # External object files for target __idf_main
 __idf_main_EXTERNAL_OBJECTS =
 
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/radio_jkk.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/RawSplit/raw_split.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/display/jkk_tools.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_main.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/jkk_audio_sdwrite.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/jkk_nvs.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/jkk_settings.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stations.txt.S.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/__/index.html.S.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/build.make
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library libmain.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C static library libmain.a"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean_target.cmake
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_main.dir/link.txt --verbose=$(VERBOSE)
 
@@ -176,6 +260,7 @@ esp-idf/main/CMakeFiles/__idf_main.dir/clean:
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean.cmake
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/clean
 
+esp-idf/main/CMakeFiles/__idf_main.dir/depend: index.html.S
 esp-idf/main/CMakeFiles/__idf_main.dir/depend: stations.txt.S
 	cd /Users/sebastian/src/RadioJKK/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/sebastian/src/RadioJKK/radioJKK32 /Users/sebastian/src/RadioJKK/radioJKK32/main /Users/sebastian/src/RadioJKK/build /Users/sebastian/src/RadioJKK/build/esp-idf/main /Users/sebastian/src/RadioJKK/build/esp-idf/main/CMakeFiles/__idf_main.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/depend

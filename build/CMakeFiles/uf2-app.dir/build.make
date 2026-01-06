@@ -67,7 +67,7 @@ include CMakeFiles/uf2-app.dir/compiler_depend.make
 include CMakeFiles/uf2-app.dir/progress.make
 
 CMakeFiles/uf2-app:
-	/opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "UF2_CMD=python;/Users/sebastian/src/esp-adf/esp-idf/tools/mkuf2.py;write;--chip;esp32" -D "UF2_ARGS=--json;/Users/sebastian/src/RadioJKK/build/flasher_args.json;-o;/Users/sebastian/src/RadioJKK/build/uf2-app.bin;--bin;app" -P /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/run_uf2_cmds.cmake
+	/opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "UF2_CMD=/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python;/Users/sebastian/src/esp-adf/esp-idf/tools/mkuf2.py;write;--chip;esp32" -D "UF2_ARGS=--json;/Users/sebastian/src/RadioJKK/build/flasher_args.json;-o;/Users/sebastian/src/RadioJKK/build/uf2-app.bin;--bin;app" -P /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/run_uf2_cmds.cmake
 
 CMakeFiles/uf2-app.dir/codegen:
 .PHONY : CMakeFiles/uf2-app.dir/codegen

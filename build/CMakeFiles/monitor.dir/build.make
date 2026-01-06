@@ -67,7 +67,7 @@ include CMakeFiles/monitor.dir/compiler_depend.make
 include CMakeFiles/monitor.dir/progress.make
 
 CMakeFiles/monitor:
-	cd /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py && /opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "SERIAL_TOOL=python;-m;esp_idf_monitor" -D "SERIAL_TOOL_ARGS=--toolchain-prefix;xtensa-esp32-elf-;;--target;esp32;;--revision;0;;/Users/sebastian/src/RadioJKK/build/RadioJKK.elf" -D WORKING_DIRECTORY=/Users/sebastian/src/RadioJKK/build -P run_serial_tool.cmake
+	cd /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py && /opt/local/bin/cmake -D IDF_PATH=/Users/sebastian/src/esp-adf/esp-idf -D "SERIAL_TOOL=/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python;-m;esp_idf_monitor" -D "SERIAL_TOOL_ARGS=--toolchain-prefix;xtensa-esp32-elf-;;--target;esp32;;--revision;0;;/Users/sebastian/src/RadioJKK/build/RadioJKK.elf" -D WORKING_DIRECTORY=/Users/sebastian/src/RadioJKK/build -P run_serial_tool.cmake
 
 CMakeFiles/monitor.dir/codegen:
 .PHONY : CMakeFiles/monitor.dir/codegen

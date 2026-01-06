@@ -76,7 +76,7 @@ x509_crt_bundle.S: /Users/sebastian/src/esp-adf/esp-idf/tools/cmake/scripts/data
 
 esp-idf/mbedtls/x509_crt_bundle:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating x509_crt_bundle"
-	cd /Users/sebastian/src/RadioJKK/build/esp-idf/mbedtls && python /Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/esp_crt_bundle/gen_crt_bundle.py --input /Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/esp_crt_bundle/cacrt_all.pem /Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/esp_crt_bundle/cacrt_local.pem -q --max-certs 200
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/mbedtls && /Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/esp_crt_bundle/gen_crt_bundle.py --input /Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/esp_crt_bundle/cacrt_all.pem /Users/sebastian/src/esp-adf/esp-idf/components/mbedtls/esp_crt_bundle/cacrt_local.pem -q --max-certs 200
 
 esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/codegen:
 .PHONY : esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/codegen

@@ -12,7 +12,7 @@ radioJKK32/main/metadata_parser*
 
 */build
 */build/*
-
+build/
 # emacs
 .dir-locals.el
 

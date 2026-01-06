@@ -72,10 +72,10 @@ esp-idf/partition_table/CMakeFiles/partition_table_bin: partition_table/partitio
 partition_table/partition-table.bin: /Users/sebastian/src/RadioJKK/radioJKK32/partitions_radiojkk.csv
 partition_table/partition-table.bin: /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/gen_esp32part.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../partition_table/partition-table.bin"
-	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && python /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB -- /Users/sebastian/src/RadioJKK/radioJKK32/partitions_radiojkk.csv /Users/sebastian/src/RadioJKK/build/partition_table/partition-table.bin
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB -- /Users/sebastian/src/RadioJKK/radioJKK32/partitions_radiojkk.csv /Users/sebastian/src/RadioJKK/build/partition_table/partition-table.bin
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /opt/local/bin/cmake -E echo "Partition table binary generated. Contents:"
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /opt/local/bin/cmake -E echo "*******************************************************************************"
-	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && python /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB -- /Users/sebastian/src/RadioJKK/build/partition_table/partition-table.bin
+	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/sebastian/src/esp-adf/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 4MB -- /Users/sebastian/src/RadioJKK/build/partition_table/partition-table.bin
 	cd /Users/sebastian/src/RadioJKK/build/esp-idf/partition_table && /opt/local/bin/cmake -E echo "*******************************************************************************"
 
 esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/codegen:

@@ -67,8 +67,8 @@ include CMakeFiles/save-defconfig.dir/compiler_depend.make
 include CMakeFiles/save-defconfig.dir/progress.make
 
 CMakeFiles/save-defconfig:
-	python /Users/sebastian/src/esp-adf/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /Users/sebastian/src/RadioJKK/build/config.env
-	python -m kconfgen --list-separator=semicolon --kconfig /Users/sebastian/src/esp-adf/esp-idf/Kconfig --sdkconfig-rename /Users/sebastian/src/esp-adf/esp-idf/sdkconfig.rename --config /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig --defaults /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig.defaults --defaults /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig.defaults.esp32 --env-file /Users/sebastian/src/RadioJKK/build/config.env --dont-write-deprecated --output savedefconfig /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig.defaults
+	/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/sebastian/src/esp-adf/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /Users/sebastian/src/RadioJKK/build/config.env
+	/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python -m kconfgen --list-separator=semicolon --kconfig /Users/sebastian/src/esp-adf/esp-idf/Kconfig --sdkconfig-rename /Users/sebastian/src/esp-adf/esp-idf/sdkconfig.rename --config /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig --defaults /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig.defaults --defaults /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig.defaults.esp32 --env-file /Users/sebastian/src/RadioJKK/build/config.env --dont-write-deprecated --output savedefconfig /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig.defaults
 
 CMakeFiles/save-defconfig.dir/codegen:
 .PHONY : CMakeFiles/save-defconfig.dir/codegen

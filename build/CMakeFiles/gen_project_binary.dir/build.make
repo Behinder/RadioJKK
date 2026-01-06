@@ -70,7 +70,7 @@ CMakeFiles/gen_project_binary: .bin_timestamp
 
 .bin_timestamp: RadioJKK.elf
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sebastian/src/RadioJKK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	python /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 80m --flash_size 4MB --elf-sha256-offset 0xb0 --min-rev-full 0 --max-rev-full 399 -o /Users/sebastian/src/RadioJKK/build/RadioJKK.bin /Users/sebastian/src/RadioJKK/build/RadioJKK.elf
+	/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/sebastian/src/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 80m --flash_size 4MB --elf-sha256-offset 0xb0 --min-rev-full 0 --max-rev-full 399 -o /Users/sebastian/src/RadioJKK/build/RadioJKK.bin /Users/sebastian/src/RadioJKK/build/RadioJKK.elf
 	/opt/local/bin/cmake -E echo "Generated /Users/sebastian/src/RadioJKK/build/RadioJKK.bin"
 	/opt/local/bin/cmake -E md5sum /Users/sebastian/src/RadioJKK/build/RadioJKK.bin > /Users/sebastian/src/RadioJKK/build/.bin_timestamp
 

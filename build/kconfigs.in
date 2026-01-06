@@ -79,4 +79,6 @@ source "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__c
 source "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp-dsp/Kconfig"
 source "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__esp_websocket_client/Kconfig"
 source "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__jsmn/Kconfig"
+source "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__mdns/Kconfig"
 source "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/espressif__nghttp/Kconfig"
+source "/Users/sebastian/src/RadioJKK/radioJKK32/managed_components/lvgl__lvgl/Kconfig"

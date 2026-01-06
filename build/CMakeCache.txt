@@ -535,7 +535,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=153
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=156
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -585,7 +585,7 @@ C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/opt/local/bin/git][v2.52.0()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/opt/local/bin/python3.13][cfound components: Interpreter ][v3.13.11()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python][cfound components: Interpreter ][v3.13.11()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -596,11 +596,10 @@ _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
 _Python3_Development_REASON_FAILURE:INTERNAL=
-//Path to a program.
-_Python3_EXECUTABLE:INTERNAL=/opt/local/bin/python3.13
+_Python3_EXECUTABLE:INTERNAL=/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;11;32;64;;;abi3;/opt/local/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13;/opt/local/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13;/opt/local/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages;/opt/local/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=95668878922293e3c7091e6e4e1373b7
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;11;32;64;;;abi3;/opt/local/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13;/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/lib/python3.13;/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/lib/python3.13/site-packages;/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/lib/python3.13/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=db4c02bded39c5169127e356218d6733
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

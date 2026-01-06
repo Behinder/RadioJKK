@@ -184,6 +184,9 @@ RadioJKK.elf: esp-idf/perfmon/libperfmon.a
 RadioJKK.elf: esp-idf/rt/librt.a
 RadioJKK.elf: esp-idf/spiffs/libspiffs.a
 RadioJKK.elf: esp-idf/wifi_provisioning/libwifi_provisioning.a
+RadioJKK.elf: esp-idf/lvgl__lvgl/liblvgl__lvgl.a
+RadioJKK.elf: esp-idf/espressif__esp_lcd_sh1107/libespressif__esp_lcd_sh1107.a
+RadioJKK.elf: esp-idf/espressif__mdns/libespressif__mdns.a
 RadioJKK.elf: esp-idf/main/libmain.a
 RadioJKK.elf: esp-idf/audio_sal/libaudio_sal.a
 RadioJKK.elf: esp-idf/adf_utils/libadf_utils.a
@@ -222,7 +225,6 @@ RadioJKK.elf: esp-idf/app_trace/libapp_trace.a
 RadioJKK.elf: esp-idf/cmock/libcmock.a
 RadioJKK.elf: esp-idf/unity/libunity.a
 RadioJKK.elf: esp-idf/esp_driver_cam/libesp_driver_cam.a
-RadioJKK.elf: esp-idf/esp_eth/libesp_eth.a
 RadioJKK.elf: esp-idf/esp_hid/libesp_hid.a
 RadioJKK.elf: esp-idf/esp_local_ctrl/libesp_local_ctrl.a
 RadioJKK.elf: esp-idf/esp_https_server/libesp_https_server.a
@@ -233,6 +235,10 @@ RadioJKK.elf: esp-idf/rt/librt.a
 RadioJKK.elf: esp-idf/wifi_provisioning/libwifi_provisioning.a
 RadioJKK.elf: esp-idf/protocomm/libprotocomm.a
 RadioJKK.elf: esp-idf/protobuf-c/libprotobuf-c.a
+RadioJKK.elf: esp-idf/lvgl__lvgl/liblvgl__lvgl.a
+RadioJKK.elf: esp-idf/espressif__esp_lcd_sh1107/libespressif__esp_lcd_sh1107.a
+RadioJKK.elf: esp-idf/espressif__mdns/libespressif__mdns.a
+RadioJKK.elf: esp-idf/esp_eth/libesp_eth.a
 RadioJKK.elf: esp-idf/espcoredump/libespcoredump.a
 RadioJKK.elf: /Users/sebastian/src/esp-adf/components/esp_coze/libs/esp32/libcoze_websocket.a
 RadioJKK.elf: esp-idf/espressif__esp_websocket_client/libespressif__esp_websocket_client.a

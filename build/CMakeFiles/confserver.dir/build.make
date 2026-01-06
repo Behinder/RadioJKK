@@ -67,8 +67,8 @@ include CMakeFiles/confserver.dir/compiler_depend.make
 include CMakeFiles/confserver.dir/progress.make
 
 CMakeFiles/confserver:
-	python /Users/sebastian/src/esp-adf/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /Users/sebastian/src/RadioJKK/build/config.env
-	python -m kconfserver --env-file /Users/sebastian/src/RadioJKK/build/config.env --kconfig /Users/sebastian/src/esp-adf/esp-idf/Kconfig --sdkconfig-rename /Users/sebastian/src/esp-adf/esp-idf/sdkconfig.rename --config /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig
+	/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/sebastian/src/esp-adf/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /Users/sebastian/src/RadioJKK/build/config.env
+	/Users/sebastian/.espressif/python_env/idf5.4_py3.13_env/bin/python -m kconfserver --env-file /Users/sebastian/src/RadioJKK/build/config.env --kconfig /Users/sebastian/src/esp-adf/esp-idf/Kconfig --sdkconfig-rename /Users/sebastian/src/esp-adf/esp-idf/sdkconfig.rename --config /Users/sebastian/src/RadioJKK/radioJKK32/sdkconfig
 
 CMakeFiles/confserver.dir/codegen:
 .PHONY : CMakeFiles/confserver.dir/codegen
